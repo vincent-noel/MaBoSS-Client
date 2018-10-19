@@ -500,3 +500,4 @@ class MaBoSSClient:
             if self._pidfile:
                 os.remove(self._pidfile)
             self._pid = None
+        self._socket.close()
