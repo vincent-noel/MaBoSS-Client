@@ -1,0 +1,16 @@
+sudo: required
+
+services: docker
+language: python
+
+python: 3.5
+
+before_install:
+- pip install -U docker-compose
+- docker-compose up -d maboss-server
+
+install:
+- pip install .
+
+script:
+- python -m unittest test

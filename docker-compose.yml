@@ -1,0 +1,11 @@
+#docker-compose.yml
+version: '3.3'
+services:
+
+  maboss-server:
+    image: vnoel/maboss-server:latest
+    container_name: maboss-server
+    ports:
+      - "7777:7777"
+    restart: unless-stopped
+
